@@ -1,0 +1,157 @@
+*
+{
+  margin: 0;
+}
+.image
+{
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+}
+
+a
+{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+
+button
+{
+  padding: 3%;
+  width: 70%;
+  border-radius: 15px;
+  border: none;
+}
+.primaryButton
+{
+  color: white;
+}
+.secondaryButton
+{
+  color: gray;
+  border: solid;
+  border-color: gray;
+  border-width: 1px;
+  background-color: white;
+}
+.DesktopHeader
+{
+  background-color: #04BA56;
+  display: flex;
+  justify-content: space-between;
+}
+.selected
+{
+  font-weight: bold;
+}
+.navbar
+{
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: -5%;
+  padding: 2.3% 0;
+  width: 50%;
+}
+.contacts
+{
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+.contactHeader
+{
+  width: 5%;
+}
+
+.mainSection
+{
+  display: flex;
+}
+.infoCard
+{
+  height: 55vh;
+  padding: 1%;
+  padding-bottom: 5%;
+  margin: 5% 2%;
+  box-shadow: 2px 2px 10px 5px rgba(180, 180, 180, 0.301);
+  border-radius: 5%;
+  width: 25%;
+}
+.infoCard p
+{
+  padding: 0 4%;
+}
+.workStatus
+{
+  margin: 5% 2%;
+  box-shadow: 2px 2px 10px 5px rgba(180, 180, 180, 0.301);
+  border-radius: 5%;
+  width: 40%;
+}
+.corpus
+{
+  padding: 8%;
+}
+.corpus h2
+{
+  margin: 3% 0;
+}
+.corpus input
+{
+  margin: 5% 0;
+}
+.corpus button
+{
+  background-color: #04BA56;
+  color: white;
+  width: 35%;
+}
+.corpus input
+{
+  padding: 2%;
+  border-radius: 8px;
+  border-width: 1px;
+  width: 40%;
+}
+.storePreview
+{
+  margin:5% 1%;
+  height: 55vh;
+  width: 25%;
+}
+.header
+{
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: #04BA56;
+}
+.logo
+{
+  width: 40%;
+  padding: 0 30%;
+}
+.previewImage
+{
+  width: 90%;
+}
+.PreviewCard
+{
+  margin: 20% 0;
+  margin-left: 15%;
+  text-align: center;
+  width: 70%;
+  border-radius: 7%;
+  box-shadow: 2px 2px 10px 5px rgba(180, 180, 180, 0.301);
+}
+.PreviewCard p
+{
+  margin: 5% 0;
+}
+.PreviewCard button
+{
+  margin: 5% 0;
+}
