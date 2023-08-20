@@ -59,12 +59,13 @@ button
 .contacts
 {
   display: flex;
-  justify-content: space-evenly;
-  width: 50%;
+  justify-content: space-between;
+  width: 30%;
+  margin-right: 4%;
 }
 .contactHeader
 {
-  width: 5%;
+  width: 7%;
 }
 
 .mainSection
