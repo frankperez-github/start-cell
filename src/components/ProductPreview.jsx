@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProductPreview({product})
 {
@@ -8,7 +9,9 @@ export default function ProductPreview({product})
                 <Image src={product.image} fill className="image"/>
             </div>
             <p>{product.title}</p>
-            <button className="primaryButton">Ver más</button>
+            <Link href={`Products/${product.id}`}>
+                <button className="primaryButton" style={{backgroundColor: `${product.buttonColor}`}}>Ver más</button>
+            </Link>
         </div>
     );
 }

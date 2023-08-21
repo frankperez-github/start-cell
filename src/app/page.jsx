@@ -9,10 +9,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { Router } from 'next/router'
 
 export default function Home() {
   const [products, setProducts] = useState([{
-    "id":"1",
+    "id":"primero1",
     "title": "Iphone 13 Max",
     "image": "/preview.svg",
     "description": "esta bueno"
@@ -35,6 +36,22 @@ export default function Home() {
     "image": "/preview.svg",
     "description": "esta bueno"
   }])
+
+  const handleID=()=>
+  {
+    const Id = document.getElementById("inputID").value
+    const clients = [...products]
+    var result = clients.filter(client=>client.id === Id)
+    if(result.length == 0)
+    {
+      window.alert("Id no encontrado")
+    }
+    else
+    {
+      window.location = `Status/${Id}`
+    }
+  }
+
   return (
     <main>
       <DesktopHeader />
@@ -60,8 +77,8 @@ export default function Home() {
           <div className="corpus">
             <h2>Ingresa tu ID</h2>
             <p>Para conocer el estado de reparación de tu dispositivo</p>
-            <input type="text" name="workID"/><br />
-            <button>Aceptar</button>
+            <input type="text" id="inputID"/><br />
+            <button onClick={handleID}>Aceptar</button>
           </div>
         </div>
         <div className="storePreview">
@@ -78,7 +95,7 @@ export default function Home() {
               <SwiperSlide><ProductPreview product={product}/></SwiperSlide>
             ))}
           </Swiper>
-            <button className='secondaryButton'>Ir a la tienda</button>
+            <button onClick={()=>window.location = "Store"} className='secondaryButton goToStore'>Ir a la tienda</button>
           </div>
         </div>
       </div>
