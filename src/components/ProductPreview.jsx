@@ -10,7 +10,7 @@ export default function ProductPreview({product})
             </div>
             <p>{product.title}</p>
             <Link href={`Products/${product.id}`}>
-                <button className="primaryButton" style={{backgroundColor: `${product.buttonColor}`}}>Ver más</button>
+                <button className="primaryButton" style={{backgroundColor: `${product.button_color}`}}>Ver más</button>
             </Link>
         </div>
     );

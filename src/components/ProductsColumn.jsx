@@ -4,7 +4,11 @@ export default function ProductsColumn({product1, product2})
 {
     return(
         <div className="ProductsColumn">
-            columna
+            <ProductPreview product={product1}/>
+
+            {product2 &&
+                <ProductPreview product={product2}/>
+            }
         </div>
     );
 }
