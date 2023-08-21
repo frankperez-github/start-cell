@@ -1,7 +1,8 @@
 'use client'
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import SideMenu from "./SideMenu";
 
 export default function Header ()
 {
@@ -25,6 +26,9 @@ export default function Header ()
             nav.classList.add("selected")
         }
     },[])
+
+    const [menu,setMenu] = useState("none")
+
     return (
         <div className="Header">
             <div className="DesktopHeader">
@@ -52,7 +56,8 @@ export default function Header ()
                 </div>
             </div>
             <div className="MobileHeader">
-                <div className="burger">
+                <SideMenu setMenu={setMenu} menu={menu}/>
+                <div className="burger" onClick={()=>setMenu("block")}>
                     <Image src="/burger.svg" fill className="image"/>
                 </div>
             </div>

@@ -9,38 +9,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Router } from 'next/router'
+import useSiteContext from './Hooks/useSiteContext'
 
 export default function Home() {
-  const [products, setProducts] = useState([{
-    "id":"primero1",
-    "title": "Iphone 13 Max",
-    "image": "/preview.svg",
-    "description": "esta bueno"
-  },
-  {
-    "id":"2",
-    "title": "Iphone 13 Max",
-    "image": "/preview.svg",
-    "description": "esta bueno"
-  },
-  {
-    "id":"1",
-    "title": "Iphone 13 Max",
-    "image": "/preview.svg",
-    "description": "esta bueno"
-  },
-  {
-    "id":"2",
-    "title": "Iphone 13 Max",
-    "image": "/preview.svg",
-    "description": "esta bueno"
-  }])
-
+  const {products} = useSiteContext()
   const handleID=()=>
   {
     const Id = document.getElementById("inputID").value
-    const clients = [...products]
-    var result = clients.filter(client=>client.id === Id)
+    var result = products.filter(product=>product.id === Id)
     if(result.length == 0)
     {
       window.alert("Id no encontrado")
@@ -87,7 +63,10 @@ export default function Home() {
         </div>
         <div className="storePreview">
           <div className="title">
-            <h2><spam>Tienda Online</spam> Start Cell</h2>
+            <div className="line">
+              <h2>Tienda Online</h2>
+              <h2><span>Start Cell</span></h2>
+            </div>
             <Swiper
             modules={[Navigation]}
             spaceBetween={0}
@@ -95,7 +74,7 @@ export default function Home() {
             navigation={true}
           >
             {products.map(product=>(
-              <SwiperSlide><ProductPreview product={product}/></SwiperSlide>
+              <SwiperSlide className='slide'><ProductPreview product={product}/></SwiperSlide>
             ))}
           </Swiper>
             <button onClick={()=>window.location = "Store"} className='secondaryButton goToStore'>Ir a la tienda</button>

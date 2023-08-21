@@ -17,7 +17,6 @@ a
   font-size: 30px;
 }
 
-
 button
 {
   cursor: pointer;
@@ -38,8 +37,11 @@ button
   border-width: 1px;
   background-color: white;
 }
-
-/***************Desktop***********************/
+.line
+{
+  display: flex;
+}
+/***************Desktop Header***********************/
 .DesktopHeader
 {
   background-color: #04BA56;
@@ -52,6 +54,7 @@ button
 }
 .burger
 {
+  cursor: pointer;
   width: 7%;
   padding: 4% 5% 4% 88%;
 }
@@ -93,13 +96,12 @@ button
 {
   background-image: url("../../public/lightBackgr.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 .logoBackgr
 {
-  width: 50%;
-  margin: 8% 25%;
-  margin-top: 0;
+  width: 60%;
+  margin-left: 20%;
   padding-top: 10%;
 }
 .infoCard
@@ -281,6 +283,10 @@ button
 
 /******Store and product sections*************/
 
+.no-flex{
+  display: block;
+  text-align: center;
+}
 .Store h2
 {
   margin: 2% 3%;
@@ -330,7 +336,38 @@ a
   border-width: 2px;
 }
 
-.DesktopHeader, .storePreview, .workStatus{
+/***********Menu**********/
+.Menu
+{
+  z-index: 100;
+  position: fixed;
+  height: 100vh;
+  background-color: white;
+  width: 73%;
+}
+.Menu h4
+{
+  color: gray;
+  cursor: pointer;
+  margin-left: 15%;
+  margin-right: 18%;
+  margin-bottom: 9%;
+  border-bottom: solid;
+  border-color: rgb(194, 194, 194);
+}
+.close
+{
+  cursor: pointer;
+  padding-top: 55%;
+  padding-left: 15%;
+  width: 8%;
+  margin-bottom: 15%;
+}
+
+
+
+
+.DesktopHeader{
   display: block;
 }
 .MobileHeader
@@ -341,11 +378,34 @@ a
 {
   display: none;
 }
+.DesktopView
+{
+  display: block;
+}
+
 @media (max-width: 500px) {
-  .DesktopHeader, .storePreview, .workStatus{
+  .DesktopHeader{
     display: none;
   }
-  
+  .storePreview
+  {
+    width: 90%;
+    margin-left: 3%;
+    margin-bottom: 40%;
+  }
+  .storePreview button{
+    margin-left: 25%;
+  }
+  .PreviewCard button{
+    margin-left: 0%;
+  }
+  .workStatus
+  {
+    margin-top: 35%;
+    margin-bottom: 25%;
+    margin-left: 5%;
+    width: 90%;
+  }
   .MobileHeader
   {
     display: block;
@@ -360,8 +420,86 @@ a
   {
     display: block;
   }
+  .client{
+    width: 90%;
+    padding: 0 5%;
+    display: block;
+    text-align: center;
+  }
+  .client h3{
+    margin-left: 10%;
+    padding-left: 8%;
+  }
+  .Right{
+    margin: 15% 0;
+    width: 90%;
+  }
+  .Left
+  {
+    width: 50%;
+    margin: 10% 25%;
+  }
+  .left, .right{
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+  .Right{
+    width: 100%;
+    margin-left: 3%;
+  }
+  .Information
+  {
+    display: block;
+  }
+  .Information p{
+    margin: 5% 0;
+  }
+  .statusRect{
+    margin: 10% 0;
+    padding: 8%;
+    width: 100%;
+  }
   .MobileView
   {
     display: block;
+  }
+  .DesktopView
+  {
+    display: none;
+  }
+  .mobileStore
+  {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .smallCard{
+    width: 50%;
+  }
+  .Info
+  {
+    display: block;
+  }
+  .Picture{
+    width: 80%;
+  }
+  .Inform
+  {
+    width: 90%;
+    margin: 5% 5%;
+  }
+  .Inform a
+  {
+    width: 45%;
+  }
+  .buttons
+  {
+    width: 100%;
+    margin: 0;
+  }
+  .buttons button
+  {
+    width: 100%;
+    padding: 7%;
   }
 }

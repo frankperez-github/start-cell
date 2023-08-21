@@ -8,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Router } from 'next/router'
+import ProductPreview from "@/components/ProductPreview";
 
 export default function Store()
 {
@@ -16,32 +17,44 @@ export default function Store()
         <div className="">
             <Header />
             <div className="Store">
-                <h2>Tienda Online Start Cell</h2>
+                <div className="line no-flex">
+                    <h2>Tienda Online</h2>
+                    <h2><span>Start Cell</span></h2>
+                </div>
                 <div className="Carousel">
-                <Swiper
-                modules={[Navigation, Pagination]}
-                slidesPerView={7}
-                navigation={true}
-                pagination={true}
-                >
-                    {products.map((product, index)=>{
-                        return(
-                            index < products.length && index%2 == 0 &&
-                            <SwiperSlide>
-                                <ProductsColumn 
-                                    product1={
-                                            products[index]} 
-                                    product2={
-                                        products.length%2 == 1 && index == products.length-1 ?
-                                            undefined
-                                        :
-                                            products[index+1]
-                                    } />
-                            </SwiperSlide>
-                        )
-                    })}
-                    {}
-                </Swiper>
+                <div className="DesktopView">
+                    <Swiper
+                    modules={[Navigation, Pagination]}
+                    slidesPerView={7}
+                    navigation={true}
+                    pagination={true}
+                    >
+                        {products.map((product, index)=>{
+                            return(
+                                index < products.length && index%2 == 0 &&
+                                <SwiperSlide>
+                                    <ProductsColumn 
+                                        product1={
+                                                products[index]} 
+                                        product2={
+                                            products.length%2 == 1 && index == products.length-1 ?
+                                                undefined
+                                            :
+                                                products[index+1]
+                                        } />
+                                </SwiperSlide>
+                            )
+                        })}
+                        {}
+                    </Swiper>
+                </div>
+                <div className="MobileView mobileStore">
+                    {products.map((product)=>(
+                        <div className="smallCard">
+                            <ProductPreview product={product}/>
+                        </div>
+                    ))}
+                </div>
                 
                 </div>
             </div>

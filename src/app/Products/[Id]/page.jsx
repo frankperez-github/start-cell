@@ -15,7 +15,10 @@ export default function Product()
             <Header />
             <div className="Product">
                 <div className="Store">
-                    <h2>Tienda Online Start Cell</h2>
+                    <div className="line DesktopView">
+                        <h2>Tienda Online</h2>
+                        <h2><span>Start Cell</span></h2>
+                    </div>
                 </div>
                 <div className="Info">
                     <div className="Picture">

@@ -12,10 +12,13 @@ export default function Status()
     const client = clients.filter(e=>e.id === Id)[0]
     return(
         <div className="">
+            {
+                client &&
+<>
             <Header />
             <div className="client">
                 <div className="Left">
-                    <h3>Hola! Su dispositivo está: </h3>
+                    <h3>Hola!</h3><h3> Su dispositivo está: </h3>
                     {client.status === "working" ?
                         <div className="statusRect" style={{backgroundColor: "#ff91001a"}}>
                             <div className="circle">
@@ -47,6 +50,8 @@ export default function Status()
                     </div>
                 </div>
             </div>
+            </>
+            }
         </div>
     );
 }
