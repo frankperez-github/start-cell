@@ -1,14 +1,13 @@
 'use client'
 
-import DesktopHeader from '@/components/DesktopHeader'
+import Header from '@/components/Header'
 import ProductPreview from '@/components/ProductPreview'
 import Image from 'next/image'
 import { useState } from 'react'
-import { Navigation, Pagination }from 'swiper'
+import { Navigation, Pagination }from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import { Router } from 'next/router'
 
 export default function Home() {
@@ -54,8 +53,13 @@ export default function Home() {
 
   return (
     <main>
-      <DesktopHeader />
+      <Header />
       <div className="mainSection">
+        <div className="MobileView mobileMain">
+          <div className="logoBackgr">
+            <Image src="/Logo.svg" fill className='image'/>
+          </div>
+        </div>
         <div className="infoCard">
           <div className="backgrImg">
             <Image src="/backgr.svg" fill className='image'/>
@@ -85,11 +89,10 @@ export default function Home() {
           <div className="title">
             <h2><spam>Tienda Online</spam> Start Cell</h2>
             <Swiper
-            modules={{Navigation, Pagination}}
+            modules={[Navigation]}
             spaceBetween={0}
             slidesPerView={2}
-            navigation={{clickable: true}}
-            pagination={{clickable: true}}
+            navigation={true}
           >
             {products.map(product=>(
               <SwiperSlide><ProductPreview product={product}/></SwiperSlide>

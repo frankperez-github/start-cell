@@ -1,6 +1,6 @@
 'use client'
 import useSiteContext from '@/app/Hooks/useSiteContext';
-import DesktopHeader from '@/components/DesktopHeader';
+import Header from '@/components/Header';
 import Image from 'next/image';
 import {useParams} from 'next/navigation'
 import { useEffect } from 'react';
@@ -12,7 +12,7 @@ export default function Status()
     const client = clients.filter(e=>e.id === Id)[0]
     return(
         <div className="">
-            <DesktopHeader />
+            <Header />
             <div className="client">
                 <div className="Left">
                     <h3>Hola! Su dispositivo está: </h3>

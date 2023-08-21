@@ -38,11 +38,22 @@ button
   border-width: 1px;
   background-color: white;
 }
+
+/***************Desktop***********************/
 .DesktopHeader
 {
   background-color: #04BA56;
   display: flex;
   justify-content: space-between;
+}
+.MobileHeader
+{
+  box-shadow: 5px 5px 6px 2px rgba(119, 119, 119, 0.315);
+}
+.burger
+{
+  width: 7%;
+  padding: 4% 5% 4% 88%;
 }
 .selected
 {
@@ -52,10 +63,13 @@ button
 {
   color: white;
   display: flex;
-  justify-content: space-evenly;
   padding: 2.3% 0;
-  margin-left: -5.5%;
   width: 50%;
+  justify-content: left;
+}
+.navbar a
+{
+  margin-left: 6%;
 }
 .contacts
 {
@@ -69,9 +83,24 @@ button
   width: 7%;
 }
 
+
+/*****************Main*********************/
 .mainSection
 {
   display: flex;
+}
+.mobileMain
+{
+  background-image: url("../../public/lightBackgr.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logoBackgr
+{
+  width: 50%;
+  margin: 8% 25%;
+  margin-top: 0;
+  padding-top: 10%;
 }
 .infoCard
 {
@@ -262,7 +291,7 @@ button
   background-color: white;
   border: solid;
   border-width: 2px;
-  margin-left: 5%;
+  margin-left: -10%;
 }
 .Info{
   display: flex;
@@ -287,7 +316,52 @@ button
   padding: 5% 0;
 }
 .buttons{
-  width: 50%;
+  width: 70%;
   display: flex;
   justify-content: space-between;
+}
+a
+{
+  width: 50%;
+}
+.buyButton
+{
+  border: solid;
+  border-width: 2px;
+}
+
+.DesktopHeader, .storePreview, .workStatus{
+  display: block;
+}
+.MobileHeader
+{
+  display: none;
+}
+.MobileView
+{
+  display: none;
+}
+@media (max-width: 500px) {
+  .DesktopHeader, .storePreview, .workStatus{
+    display: none;
+  }
+  
+  .MobileHeader
+  {
+    display: block;
+  }
+  .infoCard
+  {
+    width: 90%;
+    margin: 5% 4%;
+    box-shadow: none;
+  }
+  .mainSection
+  {
+    display: block;
+  }
+  .MobileView
+  {
+    display: block;
+  }
 }

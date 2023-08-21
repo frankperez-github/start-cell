@@ -1,8 +1,8 @@
 'use client'
-import DesktopHeader from "@/components/DesktopHeader";
+import Header from "@/components/Header";
 import useSiteContext from "../Hooks/useSiteContext";
 import ProductsColumn from "@/components/ProductsColumn";
-import { Navigation, Pagination }from 'swiper'
+import { Navigation, Pagination }from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -14,15 +14,15 @@ export default function Store()
     const {products} = useSiteContext()
     return(
         <div className="">
-            <DesktopHeader />
+            <Header />
             <div className="Store">
                 <h2>Tienda Online Start Cell</h2>
                 <div className="Carousel">
                 <Swiper
-                modules={{Navigation, Pagination}}
+                modules={[Navigation, Pagination]}
                 slidesPerView={7}
-                navigation={{clickable: true}}
-                pagination={{clickable: true}}
+                navigation={true}
+                pagination={true}
                 >
                     {products.map((product, index)=>{
                         return(

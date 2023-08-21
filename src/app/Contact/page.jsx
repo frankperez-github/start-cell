@@ -1,11 +1,11 @@
-import DesktopHeader from "@/components/DesktopHeader";
+import Header from "@/components/Header";
 import Image from "next/image";
 
 export default function Contact()
 {
     return(
         <div className="">
-            <DesktopHeader />
+            <Header />
             <div className="Contact">
                 <div className="LeftContact">
                     <div className="LogoContact">
@@ -18,7 +18,7 @@ export default function Contact()
                     <p>Dirección del taller 2: Calle 75/ 49A y 49B #4907</p>
                     <p>Teléfono: +5354025911</p>
                     <a href="https://wa.me/+5354025911">
-                        <button className="primaryButton">Escriir por Whatsapp</button>
+                        <button className="primaryButton">Escribir por Whatsapp</button>
                     </a>
                 </div>
             </div>
