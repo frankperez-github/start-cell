@@ -41,11 +41,7 @@ export default function Home() {
             <Image src="/backgr.svg" fill className='image'/>
           </div>
           <p>En nuestro taller de reparaciones ofrecemos <b>soluciones rápidas</b> y efectivas para cualquier problema que presente su dispositivo, ya sea Apple, Samsung u otras marcas.</p>
-          <br />
-          <br />
           <p>Garantizamos un servicio honesto y de <b>calidad</b>, equipados con la última tecnología en micro soldadura.</p>
-          <br />
-          <br />
           <p>También podemos ayudarte con productos adicionales para complementar tu dispositivo.Confía en nuestra <b>experiencia</b> para recuperar el funcionamiento óptimo de tu dispositivo</p>
         </div>
         <div className="workStatus">

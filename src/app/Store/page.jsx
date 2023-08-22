@@ -24,10 +24,9 @@ export default function Store()
                 <div className="Carousel">
                 <div className="DesktopView">
                     <Swiper
-                    modules={[Navigation, Pagination]}
+                    modules={[Navigation]}
                     slidesPerView={7}
                     navigation={true}
-                    pagination={true}
                     >
                         {products.map((product, index)=>{
                             return(

@@ -152,7 +152,7 @@ button
 }
 .infoCard p
 {
-  padding: 0 4%;
+  padding: 3% 4%;
 }
 .workStatus
 {
@@ -230,7 +230,7 @@ button
   width: 50%;
 }
 
-/***************Stattus page*****************/
+/***************Status page*****************/
 .client
 {
   color: gray;
@@ -449,7 +449,7 @@ a
   }
   .infoCard
   {
-    min-height: 80vh;
+    min-height: 55vh;
     width: 90%;
     margin: 5% 4%;
     box-shadow: none;
@@ -576,11 +576,34 @@ a
 
 /********Media queries*******/
 
-@media (max-width: 580px) {
+@media (max-width: 1500px) {
   /*Font Size*/
   h2,a
   {
-    font-size: 13px;
+    font-size: 25px;
+  }
+  h3,h4
+  {
+    font-size: 17px;
+  }
+  h5,h6
+  {
+    font-size: 17px;
+  }
+  p,b
+  {
+    font-size: 12px;
+  }
+  button
+  {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1024px) {
+  /*Font Size*/
+  h2,a
+  {
+    font-size: 23px;
   }
   h3,h4
   {
@@ -597,6 +620,52 @@ a
   button
   {
     font-size: 11px;
+  }
+}
+@media (max-width: 800px) {
+  /*Font Size*/
+  h2,a
+  {
+    font-size: 15px;
+  }
+  h3,h4
+  {
+    font-size: 15px;
+  }
+  h5,h6
+  {
+    font-size: 15px;
+  }
+  p,b
+  {
+    font-size: 9.5px;
+  }
+  button
+  {
+    font-size: 9.5px;
+  }
+}
+@media (max-width: 415px) {
+  /*Font Size*/
+  h2,a
+  {
+    font-size: 20px;
+  }
+  h3,h4
+  {
+    font-size: 20px;
+  }
+  h5,h6
+  {
+    font-size: 15px;
+  }
+  p,b
+  {
+    font-size: 15px;
+  }
+  button
+  {
+    font-size: 12px;
   }
 }
 @media (max-width: 300px) {
@@ -620,5 +689,28 @@ a
   button
   {
     font-size: 11px;
+  }
+}
+@media (max-width: 280px) {
+  /*Font Size*/
+  h2,a
+  {
+    font-size: 25px;
+  }
+  h3,h4
+  {
+    font-size: 14px;
+  }
+  h5,h6
+  {
+    font-size: 10px;
+  }
+  p,b
+  {
+    font-size: 10px;
+  }
+  button
+  {
+    font-size: 9px;
   }
 }
