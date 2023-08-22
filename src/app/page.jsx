@@ -46,7 +46,7 @@ export default function Home() {
           <p>Garantizamos un servicio honesto y de <b>calidad</b>, equipados con la última tecnología en micro soldadura.</p>
           <br />
           <br />
-          <p>También podemos ayudarte con productos adicionales para complementar tu dispositivo.Confía en nuestra <b>experiencia</b> para recuperar elfuncionamiento óptimo de tu dispositivo</p>
+          <p>También podemos ayudarte con productos adicionales para complementar tu dispositivo.Confía en nuestra <b>experiencia</b> para recuperar el funcionamiento óptimo de tu dispositivo</p>
         </div>
         <div className="workStatus">
           <div className="header">
@@ -64,8 +64,7 @@ export default function Home() {
         <div className="storePreview">
           <div className="title">
             <div className="line">
-              <h2>Tienda Online</h2>
-              <h2><span>Start Cell</span></h2>
+              <h2>Tienda Online<span> Start Cell</span></h2>
             </div>
             <Swiper
             modules={[Navigation]}
