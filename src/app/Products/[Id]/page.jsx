@@ -11,6 +11,9 @@ export default function Product()
     const {products} = useSiteContext()
     const product = products.find(el=>el.id===Id)
     return(
+        
+            product ?
+            
         <div className="">
             <Header />
             <div className="Product">
@@ -22,7 +25,7 @@ export default function Product()
                 </div>
                 <div className="Info">
                     <div className="Picture">
-                        <Image src={product.image} fill className="image"/>
+                        <Image alt="" src={product.image} fill className="image"/>
                     </div>
                     <div className="Inform">
                         <h2>{product.title}</h2>
@@ -39,5 +42,8 @@ export default function Product()
                 </div>
             </div>
         </div>
+        :
+        <h2>Loading...</h2>
+        
     )
 }

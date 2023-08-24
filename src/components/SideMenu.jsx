@@ -6,7 +6,7 @@ export default function SideMenu({setMenu, menu})
     return(
         <div className="Menu" id="menu" style={{display: menu}}>
             <div className="close" onClick={()=>(setMenu("none"))}>
-                <Image alt="" src="/back.svg" fill className="image"/>
+                <Image alt="" alt="" src="/back.svg" fill className="image"/>
             </div>
             
             <Link href="/">

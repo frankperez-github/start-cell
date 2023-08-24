@@ -55,7 +55,6 @@ button
 {
   font-size: 15px;
 }
-/**/
 
 .primaryButton
 {
@@ -259,9 +258,10 @@ button
   display: flex;
   align-items: center;
 }
-.statusRect h2
+.statusRect h3
 {
-  padding-left: 10%;
+  padding-top: 7%;
+  padding-left: 5%;
 }
 .circle{
   width: 15%;

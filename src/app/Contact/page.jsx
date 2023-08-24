@@ -9,7 +9,7 @@ export default function Contact()
             <div className="Contact">
                 <div className="LeftContact">
                     <div className="LogoContact">
-                        <Image src="/Logo.svg" fill className="image"/>
+                        <Image alt="" src="/Logo.svg" fill className="image"/>
                     </div>
                 </div>
                 <div className="RightContact">

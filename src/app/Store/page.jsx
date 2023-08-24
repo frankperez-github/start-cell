@@ -29,9 +29,17 @@ export default function Store()
                     navigation={true}
                     >
                         {products.map((product, index)=>{
+                            if (index%2 == 1) {
+                                product.button_color = "#0495BA"
+                            }
+                            else
+                            {
+                                product.button_color = "#04BA56"
+                            }
                             return(
                                 index < products.length && index%2 == 0 &&
-                                <SwiperSlide>
+                                <SwiperSlide key={index}>
+            
                                     <ProductsColumn 
                                         product1={
                                                 products[index]} 

@@ -13,8 +13,8 @@ export default function Status()
     return(
         <div className="">
             {
-                client &&
-<>
+                client ?
+            <>
             <Header />
             <div className="client">
                 <div className="Left">
@@ -22,16 +22,17 @@ export default function Status()
                     {client.status === "working" ?
                         <div className="statusRect" style={{backgroundColor: "#ff91001a"}}>
                             <div className="circle">
-                                <Image src="/pendient.svg" fill className="image"/>
+                                <Image alt="" src="/pendient.svg" fill className="image"/>
                             </div>
-                            <h2>En Reparación</h2>
+                            <h3>En Reparación</h3>
                         </div>
                         :
+                        client.status === "ready" &&
                         <div className="statusRect" style={{backgroundColor: "#04ba562f"}}>
                             <div className="circle">
-                                <Image src="/ready.svg" fill className="image"/>
+                                <Image alt="" src="/ready.svg" fill className="image"/>
                             </div>
-                            <h2>Listo para recoger</h2>
+                            <h3>Listo para recoger</h3>
                         </div>
                     }
                 </div>
@@ -51,6 +52,8 @@ export default function Status()
                 </div>
             </div>
             </>
+            :
+            <h2>Loading...</h2>
             }
         </div>
     );

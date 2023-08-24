@@ -40,17 +40,17 @@ export default function Header ()
                 <div className="contacts">
                     <div className="contactHeader">
                         <a href="https://instagram.com">
-                            <Image src="/whiteInstagram.svg" fill className="image"/>
+                            <Image alt="" src="/whiteInstagram.svg" fill className="image"/>
                         </a>
                     </div>
                     <div className="contactHeader">
                         <a href="https://facebook.com">
-                            <Image src="/whiteFacebook.png" fill className="image"/>
+                            <Image alt="" src="/whiteFacebook.png" fill className="image"/>
                         </a>
                     </div>
                     <div className="contactHeader">
                         <a href="https://whatsapp.com">
-                            <Image src="/whiteWhatsApp.svg" fill className="image"/>
+                            <Image alt="" src="/whiteWhatsApp.svg" fill className="image"/>
                         </a>
                     </div>
                 </div>
@@ -58,7 +58,7 @@ export default function Header ()
             <div className="MobileHeader">
                 <SideMenu setMenu={setMenu} menu={menu}/>
                 <div className="burger" onClick={()=>setMenu("block")}>
-                    <Image src="/burger.svg" fill className="image"/>
+                    <Image alt="" src="/burger.svg" fill className="image"/>
                 </div>
             </div>
         </div>

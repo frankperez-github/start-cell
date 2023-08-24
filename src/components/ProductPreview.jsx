@@ -6,7 +6,7 @@ export default function ProductPreview({product})
     return(
         <div className="PreviewCard">
             <div className="previewImage">
-                <Image src={product.image} fill className="image"/>
+                <Image alt="" src={product.image} fill className="image"/>
             </div>
             <p>{product.title}</p>
             <Link href={`Products/${product.id}`}>
