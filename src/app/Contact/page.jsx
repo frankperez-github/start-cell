@@ -15,7 +15,7 @@ export default function Contact()
                 <div className="RightContact">
                     <h2>Contactar:</h2>
                     <p>Dirección del taller 1: Ave 35/118 y 120 #11815, Marianao</p>
-                    <p>Dirección del taller 2: Calle 75/ 49A y 49B #4907</p>
+                    <p>Dirección del taller 2: Calle 76 / 51 y 49 #4907</p>
                     <p>Teléfono: +5354025911</p>
                     <a href="https://wa.me/+5354025911">
                         <button className="primaryButton">Escribir por Whatsapp</button>
