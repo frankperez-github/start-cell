@@ -56,9 +56,9 @@ export default function Store()
                     </Swiper>
                 </div>
                 <div className="MobileView mobileStore">
-                    {products.map((product)=>(
-                        <div className="smallCard">
-                            <ProductPreview product={product}/>
+                    {products.map((product, index)=>(
+                        <div className="smallCard" key={index}>
+                            <ProductPreview key={index} product={product}/>
                         </div>
                     ))}
                 </div>

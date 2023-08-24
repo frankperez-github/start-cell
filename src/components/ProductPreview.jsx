@@ -1,7 +1,9 @@
+import useSiteContext from "@/app/Hooks/useSiteContext";
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
-export default function ProductPreview({product})
+export default function ProductPreview({product, id})
 {
     return(
         <div className="PreviewCard">
