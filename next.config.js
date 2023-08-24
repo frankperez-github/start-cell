@@ -4,14 +4,14 @@ const nextConfig = {
 }
 
 module.exports = {
-    // images: {
-    //   remotePatterns: [
-    //     {
-    //       protocol: 'https',
-    //       hostname: 'firebasestorage.googleapis.com',
-    //       port: '',
-    //       pathname: '/images/**',
-    //     },
-    //   ],
-    // },
+    images: {
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'firebasestorage.googleapis.com',
+          port: '',
+          pathname: '**',
+        },
+      ],
+    },
   }

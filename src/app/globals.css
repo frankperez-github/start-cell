@@ -33,6 +33,11 @@ button
   border-radius: 15px;
   border: none;
 }
+input 
+{
+  border: solid;
+  border-width: 2px !important;
+}
 
 /*Font Size*/
 h2, a
@@ -267,16 +272,6 @@ button
 {
   text-align: center;
   color: white;
-}
-.contacts
-{
-  width: 90%;
-  padding: 0 5%;
-}
-.contactHeader
-{
-  margin-top: 10%;
-  width: 15%;
 }
 
 
@@ -622,6 +617,16 @@ a
   }
   .RightContact button{
     width: 70%;
+  }
+  .contacts
+  {
+    width: 90%;
+    padding: 0 5%;
+  }
+  .contactHeader
+  {
+    margin-top: 10%;
+    width: 15%;
   }
 }
 

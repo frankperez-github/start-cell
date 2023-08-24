@@ -87,7 +87,7 @@ export default function Home() {
           </div>
         </div>
         <div className="footer MobileView">
-          <h2>Contacta con nosotros por tu red social favorita:</h2>
+          <p>Contacta con nosotros por tu red social favorita:</p>
           <div className="contacts">
             <div className="contactHeader">
                 <a href="https://instagram.com">
