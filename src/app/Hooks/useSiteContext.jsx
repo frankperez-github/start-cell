@@ -6,7 +6,7 @@ export default function useSiteContext()
 {
     const [products, setProducts] = useState([])
     const [clients, setClients] = useState([])
-    async function fetch(){
+    const fetchInfo = async()=>{
 
         console.log("fetching")
         const productsRef = collection(db, 'products')
@@ -30,8 +30,8 @@ export default function useSiteContext()
     }
 
     useEffect(()=>{
-        ()=>fetch()
-    })
+        fetchInfo()
+    }, [db])
     
     return {clients, products}
 }
